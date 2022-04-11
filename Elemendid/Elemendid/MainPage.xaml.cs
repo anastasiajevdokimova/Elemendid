@@ -49,7 +49,7 @@ namespace Elemendid
             }
             else if(sender == maakond_btn)
             {
-                await Navigation.PushAsync(new Maakonnad_Page());
+                await Navigation.PushAsync(new Maakond_Page());
             }
            
         }

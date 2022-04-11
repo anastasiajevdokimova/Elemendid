@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace Elemendid
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Maakonnad_Page : ContentPage
+    public partial class Maakond_Page : ContentPage
     {
         TableView table;
         Picker picker_M, picker_P;
@@ -19,9 +19,8 @@ namespace Elemendid
         TextCell lbl_info_rahv, lbl_info_pindala;
         TableSection rohkem_info;
         Image img_map, img_arms;
-        public Maakonnad_Page()
+        public Maakond_Page()
         {
-
             lbl_info_rahv = new TextCell { Text = "" };
             lbl_info_pindala = new TextCell { Text = "" };
 
@@ -55,6 +54,8 @@ namespace Elemendid
 
             img_map = new Image { };
             img_arms = new Image { };
+
+            imagesChange();
 
             st2 = new StackLayout
             {
@@ -170,7 +171,7 @@ namespace Elemendid
         private void info()
         {
             var value = (string)picker_M.SelectedItem;
-           
+
             if (value == "Harju maakond")
             {
                 lbl_info_rahv.Text = "Rahvaarv (2020) - 605 029";
@@ -276,4 +277,5 @@ namespace Elemendid
             picker_M.SelectedIndex = picker_P.SelectedIndex;
         }
     }
+    
 }
